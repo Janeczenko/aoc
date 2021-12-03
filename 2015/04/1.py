@@ -1,7 +1,7 @@
 import os
 import hashlib
 
-with open(os.path.join(os.getcwd(),'04','input.txt')) as file:
+with open('input.txt', 'r') as file:
     code = file.read()
     i=0
     while True:

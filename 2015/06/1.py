@@ -1,7 +1,7 @@
 import os
 import itertools
 
-with open(os.path.join(os.getcwd(),'06','input.txt')) as file:
+with open('input.txt', 'r') as file:
     input = file.read()
     lights = [[0 for i in range(1000)] for j in range(1000)]
     for line in input.split('\n'):

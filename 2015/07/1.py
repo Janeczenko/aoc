@@ -38,7 +38,7 @@ def func(input):
         if not change:
             return
 
-with open(os.path.join(os.getcwd(),'07','input.txt')) as file:
+with open('input.txt', 'r') as file:
     input = file.read().split('\n')
     input = [i.split(' ') for i in input]
     known_values = {}

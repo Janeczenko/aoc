@@ -1,6 +1,6 @@
 import os
 
-with open(os.path.join(os.getcwd(),'01','input.txt')) as file:
+with open('input.txt', 'r') as file:
     floor = 0
     file_content = file.read()
     for i in range(len(file_content)):

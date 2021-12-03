@@ -1,6 +1,6 @@
 import os
 
-with open(os.path.join(os.getcwd(),'02','input.txt')) as file:
+with open('input.txt', 'r') as file:
     ft = 0
     while True:
         line = file.readline().replace('\n','')

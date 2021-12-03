@@ -1,6 +1,6 @@
 import os
 
-with open(os.path.join(os.getcwd(),'05','input.txt')) as file:
+with open('input.txt', 'r') as file:
     input = file.read().split('\n')
     num_nice = 0
     for i in input:

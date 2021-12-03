@@ -8,7 +8,7 @@ def decodeVal(str):
     return len(str) + count1 + count2
 
 
-with open(os.path.join(os.getcwd(),'08','input.txt')) as file:
+with open('input.txt', 'r') as file:
     sum_all = 0
     sum_val = 0
     for line in file.read().split('\n'):

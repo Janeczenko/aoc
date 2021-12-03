@@ -8,7 +8,7 @@ def findSinglePath(city1, city2):
             return int(path[2])
 
 
-with open(os.path.join(os.getcwd(),'09','input.txt')) as file:
+with open('input.txt', 'r') as file:
     paths = file.read().replace('\n',' = ').replace('to','=').split(' = ')
     paths = [paths[i:i+3] for i in range(0,len(paths),3)]
     cities = set()
