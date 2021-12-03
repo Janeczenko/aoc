@@ -8,7 +8,8 @@ def turn():
     input = new_input
 
 
-input = '1113122113'
+with open("input.txt", "r") as f:
+    input = f.read().strip()
 
 for i in range(50):
     turn()
