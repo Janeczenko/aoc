@@ -41,8 +41,8 @@ def twoPairs():
         return False
         
 
-input = "cqjxjnds"
-
+with open("input.txt", "r") as f:
+    input = f.read().strip()
 
 
 while not (StrOfThree() and notIOL() and twoPairs()):

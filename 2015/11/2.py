@@ -41,9 +41,11 @@ def twoPairs():
         return False
         
 
-input = "cqjxxyzz"
-incrementStr()
+with open("input.txt", "r") as f:
+    input = f.read().strip()
+    
 
+incrementStr()
 
 while not (StrOfThree() and notIOL() and twoPairs()):
     incrementStr()
