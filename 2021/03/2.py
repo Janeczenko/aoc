@@ -18,7 +18,7 @@ def filter_codes(data_f, filter_mode):
     return data_f[0]
         
 
-with open("input.txt", "r") as f:
+with open("2021/03/input.txt", "r") as f:
     data = f.read().strip().split("\n")
     
 data_o = data.copy()

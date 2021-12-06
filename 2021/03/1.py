@@ -1,4 +1,4 @@
-with open("input.txt", "r") as f:
+with open("2021/03/input.txt", "r") as f:
     data = f.read().strip().split("\n")
     
 gamma = ""

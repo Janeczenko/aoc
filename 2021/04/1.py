@@ -25,7 +25,7 @@ def calculate_score(num, a):
     score *= num
     return score
 
-with open("input.txt", "r") as f:
+with open("2021/04/input.txt", "r") as f:
     data = f.read().strip().split("\n\n")
 
 numbers = [int(x) for x in data.pop(0).split(",")]

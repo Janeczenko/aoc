@@ -1,4 +1,4 @@
-with open("input.txt", "r") as f:
+with open("2021/01/input.txt", "r") as f:
     data = []
     while(row := f.readline()):
         row = int(row.replace("\n", ""))
