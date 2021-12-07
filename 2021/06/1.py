@@ -1,10 +1,9 @@
 import collections
-from typing import Counter
 
 with open("2021/06/input.txt", "r") as f:
     data = [int(x) for x in f.read().strip().split(",")]
 
-fish = dict(Counter(data))
+fish = dict(collections.Counter(data))
 print(fish)
 
 for _ in range(80):
