@@ -31,7 +31,8 @@ def main():
                     dir_sizes[direcotry_path] += int(line_separated[0])
                 
     
-    print(sum([(0 if x > 100000 else x) for x in dir_sizes.values()]))
+    disk_space_needed = dir_sizes['/'] - 40000000
+    print(min(list(filter(lambda x: x >= disk_space_needed, dir_sizes.values()))))
 
 
 if __name__ == '__main__':
