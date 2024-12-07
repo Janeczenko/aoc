@@ -11,38 +11,33 @@ def main():
     
     map_list[guard_pos[0]][guard_pos[1]] = 'X'
     while True:
-        try:
-            match guard_dir:
-                case 'u':
-                    if map_list[guard_pos[0]-1][guard_pos[1]] != '#':
-                        guard_pos[0] -= 1
-                        map_list[guard_pos[0]][guard_pos[1]] = 'X'
-                    else:
-                        guard_dir = 'r'
-                case 'r':
-                    if map_list[guard_pos[0]][guard_pos[1]+1] != '#':
-                        guard_pos[1] += 1
-                        map_list[guard_pos[0]][guard_pos[1]] = 'X'
-                    else:
-                        guard_dir = 'd'
-                case 'd':
-                    if map_list[guard_pos[0]+1][guard_pos[1]] != '#':
-                        guard_pos[0] += 1
-                        map_list[guard_pos[0]][guard_pos[1]] = 'X'
-                    else:
-                        guard_dir = 'l'
-                case 'l':
-                    if map_list[guard_pos[0]][guard_pos[1]-1] != '#':
-                        guard_pos[1] -= 1
-                        map_list[guard_pos[0]][guard_pos[1]] = 'X'
-                    else:
-                        guard_dir = 'u'
-        except IndexError:
+        if guard_pos[0] < 0 or guard_pos[0] >= len(map_list) or guard_pos[1] < 0 or guard_pos[1] >= len(map_list[1]):
             break
+        map_list[guard_pos[0]][guard_pos[1]] = 'X'
+        match guard_dir:
+            case 'u':
+                if map_list[guard_pos[0]-1][guard_pos[1]] != '#':
+                    guard_pos[0] -= 1
+                else:
+                    guard_dir = 'r'
+            case 'r':
+                if map_list[guard_pos[0]][guard_pos[1]+1] != '#':
+                    guard_pos[1] += 1
+                else:
+                    guard_dir = 'd'
+            case 'd':
+                if map_list[guard_pos[0]+1][guard_pos[1]] != '#':
+                    guard_pos[0] += 1
+                else:
+                    guard_dir = 'l'
+            case 'l':
+                if map_list[guard_pos[0]][guard_pos[1]-1] != '#':
+                    guard_pos[1] -= 1
+                else:
+                    guard_dir = 'u'
     
     total_visited = sum([len(list(filter(lambda x: x == 'X', row))) for row in map_list])
     print(total_visited)
-
 
 if __name__ == '__main__':
     main()
